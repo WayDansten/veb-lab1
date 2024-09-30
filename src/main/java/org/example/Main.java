@@ -9,7 +9,7 @@ public class Main {
         String header = "Content-Type: application/json\nContent-Length: %d\n\n%s";
         var server = new FCGIInterface();
         while (server.FCGIaccept()>= 0) {
-            long startTime = System.currentTimeMillis();
+            long startTime = System.nanoTime() / 1000;
             String request = FCGIInterface.request.params.getProperty("QUERY_STRING");
             request = request.replace('=', ' ');
             request = request.replace('X', ' ');
@@ -23,7 +23,7 @@ public class Main {
             boolean result = (x >= -r && y < r/2 && x <= 0 && y > 0) ||
             (((Math.pow(x, 2) + Math.pow(y, 2)) <= Math.pow(r, 2)) && x >= 0 && y >= 0) ||
             (y >= -(x + r)/2 && y <= 0 && x <= 0 && x >= -r);
-            long finishTime = System.currentTimeMillis() - startTime;
+            long finishTime = System.nanoTime() / 1000 - startTime;
             String body = "{\"result\": %b, \"time\": %d}".formatted(result, finishTime);
             String response = String.format(header, body.getBytes(StandardCharsets.UTF_8).length, body);
             System.out.println(response);
