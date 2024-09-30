@@ -1,0 +1,31 @@
+html {
+	background-color: mediumseagreen;
+}
+
+h1 {
+	font-size: 24px;
+	font-family: fantasy;
+	color: black;
+}
+
+h2 {
+	font-size: 18px;
+	font-family: "Handjet", sans-serif;
+  	font-weight: 700;
+}
+
+.label {
+	font-size: 18px;
+	font-family: "Handjet", sans-serif;
+  	font-weight: 700;
+}
+
+#button {
+	font-family: "Play", sans-serif;
+  	font-weight: 400;
+}
+
+#button:hover {
+	font-family: "Play", sans-serif;
+  	font-weight: 700;
+}

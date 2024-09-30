@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Play:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <form method="POST" id="dataform">
+      <table border="1" cellspacing="0" width="100%">
+        <tr>
+          <th colspan=5>
+            <h1>Горошников Тимофей Иванович, группа P3111, Вариант 21104</h1>
+          </th>
+        </tr>
+        <tr>
+          <th colspan=3 width="60%" class="label">Введите данные:</th>
+          <th width="20%" class="label">Диаграмма:</th>
+          <th width="20%" class="label">Предыдущие результаты:</th>
+        </tr>
+        <tr>
+          <td align="center" width="20%">
+            <label for="X" class="label">Выберите координату по X:</label>
+            <select id="X" name="X">
+              <option value=""></option>
+              <option value="-2">-2</option>
+              <option value="-1.5">-1.5</option>
+              <option value="-1">-1</option>
+              <option value="-0.5">-0.5</option>
+              <option value="0">0</option>
+              <option value="0.5">0.5</option>
+              <option value="1">1</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+            </select>
+          </td>
+          <td width="20%" align="center">
+            <label for="Y" class="label">Введите координату по Y:</label>
+            <input type="text" name="Y" id="Y" />
+          </td>
+          <td align="center" width="20%">
+            <label for="R" class="label">Выберите радиус R:</label>
+            <select id="R" name="R">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </td>
+          <td width="20%">
+            <img src="image.svg" alt="Диаграмма"/>
+          </td>
+          <td width="20%">
+            <table border="1" cellspacing="0" id="result_table">
+              <tr>
+                <th width="20%" class="label">Результат</th>
+                <th width="20%" class="label">X</th>
+                <th width="20%" class="label">Y</th>
+                <th width="20%" class="label">R</th>
+                <th width="20%" class="label">Время выполнения</th>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+        <td colspan=5>
+          <p align="center">
+            <input type="submit" id="button">
+          </p>
+        </td>
+        </tr>
+      </table>
+    </form>
+    <script type="text/javascript" src="script.js"></script>>
+  </body>
+</html>
